@@ -38,7 +38,7 @@ if (message.content == prefix + "help") {
                 name: `${message.member.user.username} | ${message.member.user.username}#${message.member.user.discriminator}`,
                 icon_url: message.member.user.avatarURL
               },
-            color: 0xF1DA75,
+            color: 0xFFFFFF,
             fields: [
             { name: `Suggestion:`, value: message.content.slice(9, message.content.length), inline: true}
             ]
