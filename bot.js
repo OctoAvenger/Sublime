@@ -178,7 +178,7 @@ if (message.content == prefix + "help") {
             const member = message.guild.member(user);
             const logs = member.guild.channels.find('name', 'mod-log');
             if (member) {
-                let muted = message.guild.roles.find("name", "Muted");
+                let muted = message.guild.roles.find("name", "Muted 🤐");
                 member.addRole(muted).then(() => {
                 message.reply(`Successfully muted ${user}`);
                 if (message.content.slice(10 + user.id.length, message.content.length) < 0) {
