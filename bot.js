@@ -142,7 +142,7 @@ if (message.content == prefix + "help") {
             const member = message.guild.member(user);
             const logs = member.guild.channels.find('name', 'mod-log');
             if (member) {
-                let muted = message.guild.roles.find("name", "Muted");
+                let muted = message.guild.roles.find("name", "Muted 🤐");
                 member.removeRole(muted).then(() => {
                 message.reply(`Successfully unmuted ${user}`);
                 if (message.content.slice(11 + user.id.length, message.content.length) < 0) {
