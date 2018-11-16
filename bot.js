@@ -25,8 +25,8 @@ if (message.content == prefix + "help") {
               },
             color: 0xFFFFFF,
             fields: [
-            { name: `Moderation Commads:`, value: `${prefix}ar - \`${prefix}ar @[user] [role]\`\n${prefix}rr - \`${prefix}rr @[user] [role]\`\n${prefix}delete - \`${prefix}delete [number]\`\n${prefix}mute - \`${prefix}mute @[user] [reason]\`\n${prefix}unmute - \`${prefix}unmute @[user] [reason]\`\n${prefix}inspect - \`${prefix}inspect @[user] [reason]\`\n${prefix}forgive - \`${prefix}forgive @[user] [reason]\`\n${prefix}kick - \`${prefix}kick @[user] [reason]\`\n${prefix}ban - \`${prefix}ban @[user] [reason]\``, inline: true},
-            { name: `General Commands:`, value: `suggest - \`${prefix}suggest [suggestion]\``, inline: true},
+            { name: `Moderation Commads:`, value: "${prefix}ar - `${prefix}ar @[user] [role]`\n${prefix}rr - `${prefix}rr @[user] [role]`\n${prefix}delete - `${prefix}delete [number]`\n${prefix}mute - `${prefix}mute @[user] [reason]`\n${prefix}unmute - `${prefix}unmute @[user] [reason]`\n${prefix}inspect - `${prefix}inspect @[user] [reason]`\n${prefix}forgive - `${prefix}forgive @[user] [reason]`\n${prefix}kick - `${prefix}kick @[user] [reason]`\n${prefix}ban - `${prefix}ban @[user] [reason]`", inline: true},
+            { name: `General Commands:`, value: "suggest - `${prefix}suggest [suggestion]`", inline: true},
             ]
           }
         });
