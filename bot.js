@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const ms = require("ms");
 const bot = new Discord.Client();
-const prefix = ".";
+const prefix = "$";
 
 bot.on('ready', () => {
     bot.user.setStatus('available')
