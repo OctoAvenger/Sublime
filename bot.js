@@ -17,6 +17,20 @@ bot.on('ready', () => {
 
 //Message Commands Sublime can proform.
 bot.on("message", (message) => {
+if (message.content == prefix + "help") {
+        message.channel.send({embed: {
+            author: {
+                name: `My commands are as follows:`,
+                icon_url: bot.user.avatarURL
+              },
+            color: 0xFFFFFF,
+            fields: [
+            { name: `General Commands:`, value: ".suggest - `.suggest [suggestion]`", inline: true},
+            { name: `Moderation Commads:`, value: ".ar - `.ar @[user] [role]`\n.rr - `.rr @[user] [role]`\n.delete - `.delete [number]`\n.mute - `.mute @[user] [reason]`\n.unmute - `.unmute @[user] [reason]`\n.inspect - `.inspect @[user] [reason]`\n.forgive - `.forgive @[user] [reason]`\n.kick - `.kick @[user] [reason]`\n.ban - `.ban @[user] [reason]`", inline: true},
+            ]
+          }
+        });
+    }
     if (message.content.startsWith(prefix + 'suggest')) {
         message.delete(1000);
         let embed = {embed: {
@@ -39,7 +53,7 @@ bot.on("message", (message) => {
     }
     //Moderation commands
     if (message.content.startsWith(prefix + 'delete')) {
-        if(!message.member.roles.some(r=>["Administrator", "Moderator"].includes(r.name)))
+        if(!message.member.roles.some(r=>["Divine ✨"].includes(r.name)))
         return message.reply("Sorry, you don't have permissions to use this!");
             const logs = message.member.guild.channels.find('name', 'delete-log');
             message.delete(100).then(() => {
