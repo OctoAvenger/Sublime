@@ -9,7 +9,7 @@ bot.on('ready', () => {
     bot.user.setStatus('available')
     bot.user.setPresence({
         game: {
-            name: `commands. Try ".help"`,
+            name: `commands. Try "${prefix}help"`,
             type: 2
         }
     });
@@ -25,8 +25,8 @@ if (message.content == prefix + "help") {
               },
             color: 0xFFFFFF,
             fields: [
-            { name: `General Commands:`, value: ".suggest - `.suggest [suggestion]`", inline: true},
-            { name: `Moderation Commads:`, value: ".ar - `.ar @[user] [role]`\n.rr - `.rr @[user] [role]`\n.delete - `.delete [number]`\n.mute - `.mute @[user] [reason]`\n.unmute - `.unmute @[user] [reason]`\n.inspect - `.inspect @[user] [reason]`\n.forgive - `.forgive @[user] [reason]`\n.kick - `.kick @[user] [reason]`\n.ban - `.ban @[user] [reason]`", inline: true},
+            { name: `Moderation Commads:`, value: "${prefix}ar - `${prefix}ar @[user] [role]`\n${prefix}rr - `${prefix}rr @[user] [role]`\n${prefix}delete - `${prefix}delete [number]`\n${prefix}mute - `${prefix}mute @[user] [reason]`\n${prefix}unmute - `${prefix}unmute @[user] [reason]`\n${prefix}inspect - `${prefix}inspect @[user] [reason]`\n${prefix}forgive - `${prefix}forgive @[user] [reason]`\n${prefix}kick - `${prefix}kick @[user] [reason]`\n${prefix}ban - `${prefix}ban @[user] [reason]`", inline: true},
+            { name: `General Commands:`, value: "suggest - `${prefix}suggest [suggestion]`", inline: true},
             ]
           }
         });
