@@ -206,7 +206,7 @@ if (message.content == prefix + "help") {
         message.reply('That\'s nice but who do you want to mute?');
     }
     }
-    if (message.content.startsWith(prefix + 'inspect')) {
+    if (message.content.startsWith(prefix + 'limbo')) {
         const user = message.mentions.users.first();
         if(!message.member.roles.some(r=>["Divine ✨"].includes(r.name)))
         return message.reply("Sorry, you don't have permissions to use this!");
@@ -215,7 +215,7 @@ if (message.content == prefix + "help") {
             const logs = member.guild.channels.find('name', 'mod-log');
             let timeout = message.guild.channels.find("name", "limbo");
             if (member) {
-                let inspect = message.guild.roles.find("name", "damned ⛓");
+                let inspect = message.guild.roles.find("name", "Damned ⛓");
                 member.addRole(inspect).then(() => {
                 message.reply(`Successfully put ${user} into Limbo`);
                 timeout.send(`${user} you have been placed in Limbo for \`${message.content.slice(13 + user.id.length, message.content.length)}\` you are going to have to speak with a moderator about your behavior before you will be able to chat anywhere else.`)
